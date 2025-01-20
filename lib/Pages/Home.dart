@@ -1,3 +1,4 @@
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 
 class Home extends StatefulWidget {
@@ -8,6 +9,11 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+  final List<String> Imagesurl = [
+    "images/infinity.jpg",
+    "images/salman.jpg",
+    "images/shahrukhmovies.png"
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -78,6 +84,32 @@ class _HomeState extends State<Home> {
                       fontWeight: FontWeight.bold),
                 ),
               ],
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            Center(
+              child: CarouselSlider(
+                  items: Imagesurl.map((url) {
+                    return Builder(builder: ((context) {
+                      return Container(
+                        width: MediaQuery.of(context).size.width,
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(10),
+                          child: Image.asset(
+                            url,
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                      );
+                    }));
+                  }).toList(),
+                  options: CarouselOptions(
+                      height: 225,
+                      autoPlay: true,
+                      enlargeCenterPage: true,
+                      aspectRatio: 16 / 8,
+                      viewportFraction: 0.8)),
             )
           ],
         ),
