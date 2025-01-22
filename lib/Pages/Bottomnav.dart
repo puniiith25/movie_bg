@@ -47,16 +47,8 @@ class _BottomnavState extends State<Bottomnav> {
               color: Colors.white,
               size: 30.0,
             ),
-            Icon(
-              Icons.book,
-              color: Colors.white,
-              size: 30.0,
-            ),
-            Icon(
-              Icons.person,
-              color: Colors.white,
-              size: 30.0,
-            )
+            Icon(Icons.book, color: Colors.white, size: 30.0),
+            Icon(Icons.person, color: Colors.white, size: 30.0)
           ]),
       body: Pages[currentabindex],
     );
