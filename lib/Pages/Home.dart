@@ -92,7 +92,7 @@ class _HomeState extends State<Home> {
               child: CarouselSlider(
                   items: Imagesurl.map((url) {
                     return Builder(builder: ((context) {
-                      return Container(
+                      return SizedBox(
                         width: MediaQuery.of(context).size.width,
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(10),
@@ -110,6 +110,175 @@ class _HomeState extends State<Home> {
                       enlargeCenterPage: true,
                       aspectRatio: 16 / 8,
                       viewportFraction: 0.8)),
+            ),
+            SizedBox(
+              height: 10,
+            ),
+            Text(
+              "Top Trending Movies ",
+              style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold),
+            ),
+            SizedBox(
+              height: 280,
+              child: ListView(
+                scrollDirection: Axis.horizontal,
+                padding: EdgeInsets.only(top: 20),
+                children: [
+                  Container(
+                    decoration: BoxDecoration(
+                        border: Border.all(color: Colors.white),
+                        borderRadius: BorderRadius.circular(20)),
+                    child: Stack(
+                      children: [
+                        ClipRRect(
+                          borderRadius: BorderRadius.circular(20),
+                          child: Image.asset(
+                            "images/infinity.jpg",
+                            height: 250,
+                            width: 150,
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                        Container(
+                          margin: EdgeInsets.only(
+                            top: 200,
+                          ),
+                          width: 150,
+                          decoration: BoxDecoration(
+                              color: Colors.black45,
+                              borderRadius: BorderRadius.only(
+                                  bottomLeft: Radius.circular(20),
+                                  bottomRight: Radius.circular(20))),
+                          child: Column(
+                            children: [
+                              Text(
+                                "Infinity Wars",
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.bold),
+                              ),
+                              Text(
+                                "Action, Adventure",
+                                style: TextStyle(
+                                    color: const Color.fromARGB(
+                                        145, 255, 255, 255),
+                                    fontSize: 13,
+                                    fontWeight: FontWeight.w400),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  SizedBox(
+                    width: 20,
+                  ),
+                  Container(
+                    decoration: BoxDecoration(
+                        border: Border.all(color: Colors.white),
+                        borderRadius: BorderRadius.circular(20)),
+                    child: Stack(
+                      children: [
+                        ClipRRect(
+                          borderRadius: BorderRadius.circular(20),
+                          child: Image.asset(
+                            "images/pushpa.jpg",
+                            height: 250,
+                            width: 150,
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                        Container(
+                          margin: EdgeInsets.only(
+                            top: 200,
+                          ),
+                          width: 150,
+                          decoration: BoxDecoration(
+                              color: Colors.black45,
+                              borderRadius: BorderRadius.only(
+                                  bottomLeft: Radius.circular(20),
+                                  bottomRight: Radius.circular(20))),
+                          child: Column(
+                            children: [
+                              Text(
+                                "Pushpa 2",
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.bold),
+                              ),
+                              Text(
+                                "Action, Adventure",
+                                style: TextStyle(
+                                    color: const Color.fromARGB(
+                                        145, 255, 255, 255),
+                                    fontSize: 13,
+                                    fontWeight: FontWeight.w400),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  SizedBox(
+                    width: 20,
+                  ),
+                  Container(
+                    decoration: BoxDecoration(
+                        border: Border.all(color: Colors.white),
+                        borderRadius: BorderRadius.circular(20)),
+                    child: Stack(
+                      children: [
+                        ClipRRect(
+                          borderRadius: BorderRadius.circular(20),
+                          child: Image.asset(
+                            "images/salman.jpg",
+                            height: 250,
+                            width: 150,
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                        Container(
+                          margin: EdgeInsets.only(
+                            top: 200,
+                          ),
+                          width: 150,
+                          decoration: BoxDecoration(
+                              color: Colors.black45,
+                              borderRadius: BorderRadius.only(
+                                  bottomLeft: Radius.circular(20),
+                                  bottomRight: Radius.circular(20))),
+                          child: Column(
+                            children: [
+                              Text(
+                                "Dabangg 2",
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.bold),
+                              ),
+                              Text(
+                                "Action, Adventure",
+                                style: TextStyle(
+                                    color: const Color.fromARGB(
+                                        145, 255, 255, 255),
+                                    fontSize: 13,
+                                    fontWeight: FontWeight.w400),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
+                  )
+                ],
+              ),
             )
           ],
         ),
